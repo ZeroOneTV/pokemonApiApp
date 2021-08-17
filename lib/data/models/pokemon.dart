@@ -9,7 +9,6 @@ import 'package:pokemon_api_app/data/models/pokemon_stat.dart';
 import 'package:pokemon_api_app/data/models/pokemon_type.dart';
 import 'package:pokemon_api_app/data/models/version_game_index.dart';
 
-
 @JsonSerializable()
 class Pokemon extends Equatable{
   const Pokemon({
