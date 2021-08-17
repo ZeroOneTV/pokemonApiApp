@@ -1,6 +1,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:pokemon_api_app/data/models/named_api_resource.dart';
 import 'package:pokemon_api_app/data/models/pokemon_ability.dart';
+import 'package:pokemon_api_app/data/models/pokemon_held_item.dart';
+import 'package:pokemon_api_app/data/models/version_game_index.dart';
 
 
 @JsonSerializable()
@@ -33,7 +36,8 @@ class Pokemon extends Equatable{
   final int? order;
   final int? weight;
   final List<PokemonAbility>? abilities;
-  final List<PokemonForm>? forms;
+  @JsonKey(name: 'forms')
+  final List<NamedApiResource>? pokemonFormsURL;
   @JsonKey(name: 'game_indices')
   final List<VersionGameIndex>? gameIndices;
   @JsonKey(name: 'held_items')
@@ -42,8 +46,10 @@ class Pokemon extends Equatable{
   final String? locationAreaEncounters;
   final List<PokemonMove>? moves;
   final PokemonSprites sprites;
-  final PokemonSpecies species;
-  final PokemonType types;
+  @JsonKey(name: 'species')
+  final List<NamedApiResource>? pokemonSpeciesURL;
+  final List<PokemonStat> stats;
+  final List<PokemonType> types;
 
   @override
   List<Object?> get props => [];
