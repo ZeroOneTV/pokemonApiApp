@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:pokemon_api_app/data/models/named_api_resource.dart';
+import 'package:pokemon_api_app/data/models/pokemon_move_version.dart';
 
 @JsonSerializable()
 class PokemonMove extends Equatable{

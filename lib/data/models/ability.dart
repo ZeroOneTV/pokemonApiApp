@@ -1,6 +1,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:pokemon_api_app/data/models/generation.dart';
+import 'package:pokemon_api_app/data/models/name.dart';
+import 'package:pokemon_api_app/data/models/named_api_resource.dart';
+import 'package:pokemon_api_app/data/models/verbose_effect.dart';
 
 @JsonSerializable()
 class Ability extends Equatable{
@@ -8,6 +11,7 @@ class Ability extends Equatable{
     this.id,
     this.name,
     this.isMainSeries,
+    this.generationURL,
     this.names,
     this.effectEntries,
     this.effectChanges,
@@ -19,7 +23,8 @@ class Ability extends Equatable{
   final String? name;
   @JsonKey(name: 'is_main_series')
   final bool? isMainSeries;
-  final Generation? generation;
+  @JsonKey(name: 'generation')
+  final NamedApiResource? generationURL;
   final List<Name>? names;
   @JsonKey(name: 'effect_entries',defaultValue: [])
   final List<VerboseEffect>? effectEntries;
