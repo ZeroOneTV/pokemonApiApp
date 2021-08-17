@@ -1,6 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:pokemon_api_app/data/models/generation.dart';
+import 'package:pokemon_api_app/data/models/ability_effect_change.dart';
+import 'package:pokemon_api_app/data/models/ability_flavor_text.dart';
+import 'package:pokemon_api_app/data/models/ability_pokemon.dart';
 import 'package:pokemon_api_app/data/models/name.dart';
 import 'package:pokemon_api_app/data/models/named_api_resource.dart';
 import 'package:pokemon_api_app/data/models/verbose_effect.dart';
